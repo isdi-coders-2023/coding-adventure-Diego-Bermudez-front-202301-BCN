@@ -1,8 +1,7 @@
-import React from "react";
 import Button from "./components/Button";
 
 const App = (): JSX.Element => {
-  return <Button text="Hola bebelopers" />;
+  return <Button text="Sign up!" />;
 };
 
 export default App;
