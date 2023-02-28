@@ -9,9 +9,11 @@ const ButtonStyled = styled.button`
   font-size: 1.25rem;
   cursor: pointer;
 
+  &:disabled {
+    opacity: 57px;
+  }
+
   @media (min-width: 900px) {
-    opacity: 57%;
-    width: 320px;
     height: 57px;
   }
 `;
