@@ -3,14 +3,14 @@ import styled from "styled-components";
 const ButtonStyled = styled.button`
   width: 323px;
   height: 40px;
-  background: #cccf18;
+  background: ${(props) => props.theme.colors.mainColor};
   border-radius: 10px;
-  font-family: "Saira Stencil One";
-  font-size: 1.25rem;
+  font-family: ${(props) => props.theme.fonts.titleFont};
+  font-size: ${(props) => props.theme.fontSizes.biggerFontSize};
   cursor: pointer;
 
   &:disabled {
-    opacity: 57px;
+    opacity: 57%;
   }
 
   @media (min-width: 900px) {
