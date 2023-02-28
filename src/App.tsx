@@ -1,7 +1,14 @@
+import Form from "./components/Form/Form";
 import Button from "./components/Button/Button";
 
 const App = (): JSX.Element => {
-  return <Button text="Sign up!" />;
+  return (
+    <>
+      <p>Hello Developers!</p>
+      <Form />
+      <Button text="Sign up!" />;
+    </>
+  );
 };
 
 export default App;
