@@ -1,41 +1,42 @@
+import Button from "../Button/Button";
+import FormStyled from "./FormStyled";
+
 const Form = (): JSX.Element => {
   return (
     <>
-      <form>
+      <FormStyled>
         <div>
-          <label>
-            email
-            <input
-              type="email"
-              name="email"
-              placeholder="Introduce your email"
-              required
-            ></input>
-          </label>
+          <label htmlFor="email">email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Introduce your email"
+            required
+          ></input>
         </div>
         <div>
-          <label>
-            password
-            <input
-              type="password"
-              name="password"
-              placeholder="Introduce your password"
-              required
-            ></input>
-          </label>
+          <label htmlFor="password">password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Introduce your password"
+            required
+          ></input>
         </div>
         <div>
-          <label>
-            image
-            <input
-              type="file"
-              name="image"
-              accept="image/png, image/jpeg"
-              placeholder="Introduce and image"
-            ></input>
-          </label>
+          <label htmlFor="image">image</label>
+          <input
+            id="image"
+            type="file"
+            name="image"
+            accept="image/png, image/jpeg"
+            placeholder="Introduce and image"
+          ></input>
         </div>
-      </form>
+        <Button text="Sign up" />
+      </FormStyled>
     </>
   );
 };
