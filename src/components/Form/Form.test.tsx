@@ -5,18 +5,15 @@ import Form from "./Form";
 
 describe("Given the Form component", () => {
   describe("When it's rendered", () => {
-    const componentRender = () =>
+    test("Then it should show an input field with the type 'email'", () => {
+      const inputLabel = "email";
+      const expectedInputType = "email";
+
       render(
         <ThemeProvider theme={theme}>
           <Form />
         </ThemeProvider>
       );
-
-    test("Then it should show an input field with the type 'email'", () => {
-      const inputLabel = "email";
-      const expectedInputType = "email";
-
-      componentRender();
 
       const inputType = screen.getByLabelText(inputLabel);
 
@@ -27,7 +24,11 @@ describe("Given the Form component", () => {
       const inputLabel = "password";
       const expectedInputType = "password";
 
-      componentRender();
+      render(
+        <ThemeProvider theme={theme}>
+          <Form />
+        </ThemeProvider>
+      );
 
       const inputType = screen.getByLabelText(inputLabel);
 
@@ -38,7 +39,11 @@ describe("Given the Form component", () => {
       const inputLabel = "image";
       const expectedInputType = "file";
 
-      componentRender();
+      render(
+        <ThemeProvider theme={theme}>
+          <Form />
+        </ThemeProvider>
+      );
 
       const inputType = screen.getByLabelText(inputLabel);
 
