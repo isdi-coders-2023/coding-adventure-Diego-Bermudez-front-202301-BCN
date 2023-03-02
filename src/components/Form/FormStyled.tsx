@@ -29,9 +29,11 @@ const FormStyled = styled.form.attrs({
   }
 
   @media (min-width: 900px) {
-    input {
-      height: 57px;
-      width: 832px;
+    & div {
+      & input {
+        height: 57px;
+        width: 832px;
+      }
     }
   }
 `;

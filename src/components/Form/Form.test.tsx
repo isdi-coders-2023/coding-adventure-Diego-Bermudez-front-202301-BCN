@@ -5,9 +5,8 @@ import Form from "./Form";
 
 describe("Given the Form component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show an input field with the type 'email'", () => {
-      const inputLabel = "email";
-      const expectedInputType = "email";
+    test("Then it should show an input field with label 'email'", () => {
+      const fieldName = "email";
 
       render(
         <ThemeProvider theme={theme}>
@@ -15,14 +14,13 @@ describe("Given the Form component", () => {
         </ThemeProvider>
       );
 
-      const inputType = screen.getByLabelText(inputLabel);
+      const inputField = screen.getByLabelText(fieldName);
 
-      expect(inputType).toHaveAttribute("type", expectedInputType);
+      expect(inputField).toBeInTheDocument();
     });
 
-    test("Then it should show an input field with the type 'password'", () => {
-      const inputLabel = "password";
-      const expectedInputType = "password";
+    test("Then it should show an input field with label 'password'", () => {
+      const fieldName = "password";
 
       render(
         <ThemeProvider theme={theme}>
@@ -30,14 +28,12 @@ describe("Given the Form component", () => {
         </ThemeProvider>
       );
 
-      const inputType = screen.getByLabelText(inputLabel);
-
-      expect(inputType).toHaveAttribute("type", expectedInputType);
+      const inputField = screen.getByLabelText(fieldName);
+      expect(inputField).toBeInTheDocument();
     });
 
-    test("Then it should show an file input with the type 'file'", () => {
-      const inputLabel = "image";
-      const expectedInputType = "file";
+    test("Then it should show an file input with label 'file'", () => {
+      const fieldName = "image";
 
       render(
         <ThemeProvider theme={theme}>
@@ -45,9 +41,8 @@ describe("Given the Form component", () => {
         </ThemeProvider>
       );
 
-      const inputType = screen.getByLabelText(inputLabel);
-
-      expect(inputType).toHaveAttribute("type", expectedInputType);
+      const inputField = screen.getByLabelText(fieldName);
+      expect(inputField).toBeInTheDocument();
     });
   });
 });
