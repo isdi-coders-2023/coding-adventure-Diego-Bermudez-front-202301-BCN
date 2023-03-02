@@ -41,10 +41,10 @@ button {
 
 img {
   max-width: 100%;
+  
 }
 input {
-  border: none;
-
+  all: unset;
 }
 
 `;
