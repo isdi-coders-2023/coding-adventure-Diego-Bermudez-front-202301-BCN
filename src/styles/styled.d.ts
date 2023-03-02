@@ -14,6 +14,7 @@ declare module "styled-components" {
       titleFont: string;
       mainTitleFont: string;
     };
+
     fontSizes: {
       smallerFontSize: string;
       defaultFontSize: string;
